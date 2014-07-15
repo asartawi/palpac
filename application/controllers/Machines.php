@@ -11,12 +11,12 @@ class Machines extends CI_Controller
 
     public function index($machineName = '')
     {
-        if ($machineName != '') {
-            var $machines = $this->machine->getMachines();
-
-        } else {
+//        if ($machineName != '') {
+//            var $machines = $this->machine->getMachines();
+//
+//        } else {
             $data['machines'] = $this->machine->getMachines();
-        }
+//        }
         $this->load->view('machines', $data);
     }
 

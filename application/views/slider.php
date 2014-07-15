@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <a class="thumbnail" href="#x">
-                                <img src="images/workers.jpg" alt="Image"
+                                <img src="<?php echo base_url();?>/images/workers.jpg" alt="Image"
                                      class="img-responsive" style="height: 250px">
                             </a>
                         </div>
@@ -16,13 +16,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <a class="thumbnail" href="#x">
-                                <img src="images/sugar_machine.jpg" alt="Image"
+                                <img src="<?php echo base_url();?>/images/sugar_machine.jpg" alt="Image"
                                      class="img-responsive" style="height: 250px">
                             </a>
                         </div>
                         <div class="col-md-6">
                             <a href="#x" class="thumbnail">
-                                <img src="images/vertical_machine.jpg"
+                                <img src="<?php echo base_url();?>/images/vertical_machine.jpg"
                                      alt="Image".
                                      class="img-responsive" style="height: 250px">
                             </a>
@@ -33,14 +33,14 @@
                     <div class="row">
                         <div class="col-md-6">
                             <a href="#x" class="thumbnail">
-                                <img src="images/label_machine_1.jpg"
+                                <img src="<?php echo base_url();?>/images/label_machine_1.jpg"
                                      alt="Image"
                                      class="img-responsive" style="height: 250px">
                             </a>
                         </div>
                         <div class="col-md-6">
                             <a href="#x" class="thumbnail">
-                                <img src="images/label_machine_2.jpg"
+                                <img src="<?php echo base_url();?>/images/label_machine_2.jpg"
                                      alt="Image"
                                      class="img-responsive" style="height: 250px">
                             </a>
@@ -57,7 +57,7 @@
     <script>
         $(document).ready(function () {
             $('#myCarousel').carousel({
-                interval: 10000
+                interval: 5000
             })
 
             $('#myCarousel').on('slid.bs.carousel', function () {

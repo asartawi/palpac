@@ -17,21 +17,24 @@
     <div id="header">
         <?php $this->load->view('header'); ?>
     </div>
-    <!--<?php //print_r($machines[0]);?>-->
-    <?php for ($i = 0; $i < 4; $i++): ?>
-        <div id="machineContainer" >
-            <div class="row">
-                <h3 class="col-md-4"
-                    style="color: darkred; margin-left: 10px;"> <?php echo $machines[$i]['name']; ?></h3>
-            </div>
-            <div class="row" style="border-bottom: thin darkgray; border-bottom-style: solid">
-                <img class="col-md-4" style="margin-left:10px; max-height: 300px;padding-bottom: 10px;"
-                     src="<?php echo base_url(); ?>/<?php echo $machines[$i]['imageURL']; ?>">
+    <div id="machineContainer" style="margin-top: 10px">
+        <div class="row" style="margin-left: 10px">
 
-                <p style="margin-top: 20px"><?php echo $machines[$i]['description']; ?></p>
-            </div>
+            <h3 class="col-md-4 btn btn-default btn-lg active"
+                style="color: darkred; margin-left: 10px; margin-bottom: 10px"> <?php echo anchor('machines/machine/'.$machine['name'], $machine['name'], '') ?></h3>
         </div>
-    <?php endfor; ?>
+        <div class="row" style=" margin-left: 10px">
+            <img class="col-md-4 img-responsive img-rounded" style="margin-left:10px; padding-bottom: 10px;"
+                 src="<?php echo base_url(); ?>/<?php echo $machine['imageURL']; ?>">
+
+            <p style="margin-top: 20px"><?php echo $machine['description']; ?></p>
+        </div>
+        <div class="row" style="margin-left: 10px">
+            <iframe height=400 class="col-md-8 col-md-offset-2" src="<?php echo $machine['videoURL'] ?>" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+<?php //if(sizeof($machine)>0) echo $machine['name']; ?>
     <?php $this->load->view('footer'); ?>
 </div>
 

@@ -15,7 +15,12 @@ class Machine extends CI_Model
     }
 
     function getMachines() {
-        $query = $this->db->get('machine');
+        $query = $this->db->query('select * from machine');
+        return $query->result_array();
+    }
+
+    function getMachineByName($machineName=""){
+        $query = $this->db->query("select * from machine where name like '$machineName'");
         return $query->result_array();
     }
 }

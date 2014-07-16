@@ -9,19 +9,18 @@ class Machines extends CI_Controller
         $this->load->model('Machine', 'machine', TRUE);
     }
 
-    public function index($machineName = '')
+    public function machine($machineName = '')
     {
-//        if ($machineName != '') {
-//            var $machines = $this->machine->getMachines();
-//
-//        } else {
-            $data['machines'] = $this->machine->getMachines();
-//        }
+        if ($machineName != '') {
+            $machines = $this->machine->getMachineByName(rawurldecode($machineName));
+            if(sizeof($machines)==1){
+                $data['machine'] = $machines[0];
+                $this->load->view('machine', $data);
+                return;
+            }
+        }
+        $data['machines'] = $this->machine->getMachines();
         $this->load->view('machines', $data);
+
     }
-
-
 }
-
-/* End of file entryController.php */
-/* Location: ./application/controllers/entryController.php */

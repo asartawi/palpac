@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><?php echo anchor('/', 'Home', '') ?></li>
-                <li><?php echo anchor('machines/', 'Machines', '') ?></li>
+                <li><?php echo anchor('machines/machine', 'Machines', '') ?></li>
                 <li><?php echo anchor('clients/', 'Clients', '') ?></li>
                 <li><?php echo anchor('about/', 'About us', '') ?></li>
                 <li><?php echo anchor('contact/', 'Contact us', '') ?></li>
